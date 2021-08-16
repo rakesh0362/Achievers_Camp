@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Standards {% endblock %}
+
+
+{% block image_block %}
+
+{% endblock %}
+
+{% block content %}
+<!-- section 1 for standards-->
+
+<section class="text-center">
+    <h2 class="m-5 font-weight-bold" style="color:#ff5722;">Current Affairs</h2>
+    <!-- class row for description-->
+    <div class="row d-flex justify-content-center mb-4">
+        <!-- class column -->
+        <div class="col-md-8">
+            <p class="grey-text m-4">Achievers camp presents current Affairs on various topics:</p>
+        </div>
+    </div>
+    <!-- class row2 for cards -->
+    <div class="row">
+        {% for currentaffair in currentaffairs reversed %}
+        <div class="col-md-4 d-flex mb-5 justify-content-center">
+
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <h4 class="card-title" style="color:#6969f3 !important;">{{currentaffair.topic}}</h4>
+                    <p class="card-text">{{currentaffair.NationalNews|truncatechars:200}}</p>
+                    <a href="{% url 'achievers:detailed_list' slug=currentaffair.slug %}" class="btn btn-primary"
+                        style="background-color:#2000d4;">Read full story</a>
+
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+{%endblock%}

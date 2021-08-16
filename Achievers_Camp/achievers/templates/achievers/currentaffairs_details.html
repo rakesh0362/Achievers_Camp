@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Standards {% endblock %}
+
+
+{% block image_block %}
+<header class="info-header">
+    <div id="page-intro" class="container-fluid d-flex align-items-center justify-content-center ">
+        <div class="row d-flex justify-content-center text-center">
+            <div class="col-md-10 text-white">
+                <!-- heading -->
+                <h2 class="display-4 font-weight-bold  p-5 " style="color:#ff5722;"> Current Affairs </h2>
+                <div class="row d-flex justify-content-center text-center">
+                    <ul class="breadcrumb">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'achievers:currentaffairs_list' %}">Current Affairs</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- divider -->
+                <hr style="color:#ff5722;">
+
+                <!-- description -->
+                <h4 class="white-text my-4"></h4>
+            </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<!-- section 1 for standards-->
+
+<div id="best-feature" class="container-fluid d-flex align-items-center justify-content-center m-0 p-0"
+    style="border: blue;">
+
+
+
+    <div class="m-4" style="text-align: left; display: block;">
+        <ul>
+            {% if object.NationalNews|length > 0 %}
+            <li>
+                <h6 class="achievers-header">National News</h6>
+                <p class="achievers-content" style="color: aliceblue;">{{object.NationalNews|linebreaks}}</p>
+            </li>
+            {%endif%}
+            {% if object.InternationalNews|length > 0 %}
+            <li>
+                <h6 class="achievers-header">International News</h6>
+                <p class="achievers-content">{{object.InternationalNews|linebreaks}}</p>
+            </li>
+            {%endif%}
+            {% if object.BooksAndAuthor|length > 0 %}
+            <li>
+                <h6 class="achievers-header">Books And Author</h6>
+                <p class="achievers-content">{{object.BooksAndAuthor|linebreaks}}</p>
+            </li>
+            {%endif%}
+            {% if object.AppointmentAndResignation|length > 0 %}
+            <li>
+                <h6 class="achievers-header">Appointment And Resignation</h6>
+                <p class="achievers-content">{{object.AppointmentAndResignation|linebreaks}}</p>
+            </li>
+            {%endif%}
+
+            {% if object.ImportantDays|length > 0 %}
+            <li>
+                <h6 class="achievers-header">Important Days</h6>
+                <p class="achievers-content">{{object.ImportantDays|linebreaks}}</p>
+            </li>
+            {%endif%}
+            {% if object.Obituary|length > 0 %}
+            <li>
+                <h6 class="achievers-header">Obituary</h6>
+                <p class="achievers-content">{{object.Obituary|linebreaks}}</p>
+            </li>
+            {%endif%}
+            {% if object.Sports|length > 0 %}
+            <li>
+                <h6 class="achievers-header">Sports</h6>
+                <p class="achievers-content">{{object.Sports|linebreaks}}</p>
+            </li>
+            {%endif%}
+        </ul>
+    </div>
+</div>
+
+{%endblock%}

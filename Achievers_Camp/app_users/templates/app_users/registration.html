@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Register{% endblock %}
+
+{% block image_block %}
+<header class="info-header p-4">
+  <div id="page-intro" class="container-fluid d-flex align-items-center justify-content-center ">
+    <div class="row d-flex justify-content-center text-center">
+      <div class="col-md-10 text-white">
+        <!-- heading -->
+        <h2 class="display-4 font-weight-bold  p-5 " style="color:#ff5722;"> Registration </h2>
+        <div class="row d-flex justify-content-center text-center">
+          <ul class="breadcrumb">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="disabled-text">Registration</li>
+          </ul>
+        </div>
+
+        <!-- divider -->
+        <hr style="color:#ff5722;">
+
+        <!-- description -->
+        <h4 class="white-text my-4">Begin your journey with us.</h4>
+      </div>
+</header>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% if registered %}
+<div class="container">
+  <h1>Thank you for registering</h1>
+  <h2>For free courses <a href="{% url 'index'%}#list-course">continue</a></h2>
+  <p>To continue with the live interactive classes, select your batch</p>
+  <div class="row">
+    <div class="col-md-6 d-flex mb-5 justify-content-center">
+      <div class="card text-center" style="width: 18 rem;">
+        <div class="card-body">
+          <h4 class="card-title" style="color:#2238ff !important;">Bank Ikon - 3000 </h4>
+          <p class="card-text">(Only Prelims)<br>Duration: 3 months<br>Access: Lifetime</p>
+          <a href="/" class="btn btn-primary" style="background-color:#2000d4;">Join Now</a>
+
+        </div>
+      </div>
+      <div class="col-md-6 d-flex mb-5 justify-content-center">
+        <div class="card text-center" style="width: 18rem;">
+          <div class="card-body">
+            <h4 class="card-title" style="color:#2238ff !important;">Bank Catalyst - 3500 </h4>
+            <p class="card-text">(Only Mains)<br>Duration: 1 months<br>Access: Lifetime</p>
+            <a href="/" class="btn btn-primary" style="background-color:#2000d4;">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex mb-5 justify-content-center">
+      <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h4 class="card-title" style="color:#2238ff !important;">Bank Winners - 5000 </h4>
+          <p class="card-text">(Complete Course)<br>Duration: 4 months<br>Access: Lifetime</p>
+          <a href="/" class="btn btn-primary" style="background-color:#2000d4;">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 d-flex mb-5 justify-content-center">
+      <div class="card text-center" style="width: 18 rem;">
+        <div class="card-body">
+          <h4 class="card-title" style="color:#2238ff !important;">SSC Ikon - 4500 </h4>
+          <p class="card-text">(Only Prelims)<br>Duration: 4 months<br>Access: Lifetime</p>
+          <a href="/" class="btn btn-primary" style="background-color:#2000d4;">Join Now</a>
+
+        </div>
+      </div>
+      <div class="col-md-6 d-flex mb-5 justify-content-center">
+        <div class="card text-center" style="width: 18rem;">
+          <div class="card-body">
+            <h4 class="card-title" style="color:#2238ff !important;">SSC Catalyst - 5000 </h4>
+            <p class="card-text">(Only Mains)<br>Duration: 2-3 months<br>Access: Lifetime</p>
+            <a href="/" class="btn btn-primary" style="background-color:#2000d4;">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex mb-5 justify-content-center">
+      <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h4 class="card-title" style="color:#2238ff !important;">SSC Winners - 7000 </h4>
+          <p class="card-text">(Complete Course)<br>Duration: 5 months<br>Access: Lifetime</p>
+          <a href="/" class="btn btn-primary" style="background-color:#2000d4;">Join Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-5 justify-content-center">
+        <div class="card text-center" style="width:max-content">
+          <div class="card-body">
+            <h4 class="card-title" style="color:#2238ff !important;">Marvel - 8000 </h4>
+            <p class="card-text">(Complete Course of Bank + SSC)<br>Duration: 6 months<br>Access: Lifetime</p>
+            <a href="/" class="btn btn-primary" style="background-color:#2000d4;">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+<h3>Fill the form: </h3>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ user_form|crispy }}
+  {{ profile_form|crispy }}
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <input type="submit" value="Register" class="btn btn-primary btn-block">
+    </div>
+  </div>
+</form>
+{% endif %}
+
+{%endblock%}

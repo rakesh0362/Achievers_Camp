@@ -1,0 +1,393 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title %}Home{% endblock%}
+
+{% block image_block%}
+<header>
+    <!--Image and mask-->
+    <div id="ssc" class="container-fluid d-flex align-items-center justify-content-center h-100">
+        <div class="row d-flex justify-content-center text-center">
+            <div class="row">
+                <div class="col-sm-12 text-white">
+                    <!-- heading -->
+                    <h4 class="font-weight-bold white-text text-left p-5 mb-0" style="color:#02022e;">Make
+                        Climbing to the top demands strength, whether it is to the top of Mount Everest or to the top of
+                        career.<br><span style="text-align: right;">..Dr, APJ Abdul
+                            Kalam</span>
+                    </h4>
+
+
+
+                    <!-- divider -->
+                    <!--<hr style="color:#3122ff;">-->
+
+                    <!-- description -->
+
+                    <a href="{% url 'register' %}"> <button type="button" class="btn"
+                            style="color:#01022b;border-color:#01022b; font-weight: bold;">Want to prepare for
+                            prelims,<br>
+                            Join <span style="color: red;"><i>SSC Ikon</i></span> batch</button>
+                    </a>
+
+                    <!-- feedback and github -->
+                    <div class="row d-flex mt-5 justify-content-center text-center">
+                        <div class="col">
+                            <a href="{% url 'register' %}"> <button type="button" class="btn"
+                                    style="color:#01022b;border-color:#01022b; font-weight: bold;">Want to prepare for
+                                    mains, <br> Join <span style="color: red;"><i>SSC Catalyst</i></span> Batch</button>
+                            </a>
+                        </div>
+
+                        <div class="col">
+                            <a href="{% url 'register' %}"> <button type="button" class="btn"
+                                    style="color:#01022b;border-color:#01022b; font-weight: bold;">
+                                    Want to prepare for SSC, <br> Join our complete package <span
+                                        style="color: red;"><i>SSC Winners</i></span>
+                                    Batch</button> </a>
+                        </div>
+
+                    </div>
+                    <hr style="color: brown;">
+                    <a href="{% url 'register' %}"> <button type="button" class="btn"
+                            style="color:#01022b;border-color:#01022b; font-weight: bold; margin: 2 px; padding-top: 5 px;">For
+                            <span style="color: red;"><i>FREE DEMO</i></span> Kindly Register</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+{%endblock%}
+
+{% block content %}
+
+<main class="mt-5">
+    <div class="container">
+        <!-- section 1 for standards-->
+
+        <section class="text-center" style="background-color: bisque;">
+            <h2 class="mb-5 font-weight-bold" style="color:#225dff;">Details of SSC Examination</h2>
+            <!-- class row for description-->
+            <div class="row d-flex justify-content-center mb-4">
+                <!-- class column -->
+                <div class="col-md-8">
+                    <p class="grey-text text-justify">
+                        Achievers Camp provides online classes for the SSC examination. You can join courses only for
+                        prelims or only for mains
+                        and if you are looking for a complete package, you can opt for the complete course of Bank.<br>
+                        <br>
+                        What is SSC?
+                        SSC is an organization which conducts examination for Grade "B" and "C" for various ministries
+                        and departments for Government of India.
+                        Common Examination Conducted by SSC:
+                        SSC CGL (Combined Graduate Level)
+                        SSC CHSL (Combined Higher Secondary Level)
+                        SSC CPO (Central Police organization)
+                        SSC MTS (Multi-tasking Officer)
+                        SSC Stenographers
+
+                    </p>
+                </div>
+                <h3 class="mb-5 font-weight-bold" style="color:#225dff;">Syllabus of SSC Examination</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6"><button type="button" class="btn btn-info btn-block" id="englishBtn"
+                                onclick="englishToggle()"
+                                style="color:#01022b;border-color:#01022b; font-weight: bold; margin: 2 px; padding-top: 5 px;"><i>English</i></button>
+                            <div id="english" style="text-align: left; display: none;">
+                                <ul>
+                                    <li>
+                                        Reading Comprehension
+                                    </li>
+                                    <li>
+                                        Cloze Test
+                                    </li>
+                                    <li>
+                                        Sentence Re-arrangement (PQRS)
+                                    </li>
+                                    <li>
+                                        Error Detection
+                                    </li>
+                                    <li>
+                                        Sentence Improvement
+                                    </li>
+                                    <li>
+                                        Narration
+                                    </li>
+                                    <li>
+                                        Voice
+                                    </li>
+                                    <li>
+                                        Fillers
+                                    </li>
+                                    <li>
+                                        Miscellaneous
+                                    </li>
+                                    <li>
+                                        Spell Check
+                                    </li>
+                                    <li>
+                                        Vocabulary
+                                    </li>
+                                    <li>
+                                        Synonyms & Antonyms</li>
+                                    <li>
+                                        One Word Substitutions</li>
+                                    <li>
+                                        Idiom and phrases
+                                    <li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6"><button type="button" class="btn btn-info btn-block"
+                                onclick="mathToggle()"
+                                style="color:#01022b;border-color:#01022b; font-weight: bold; margin: 2 em; padding-top: 5 px;">
+                                <i>Quantitative Aptitude</i></button>
+                            <div id="maths" style="text-align: left; display: none;">
+                                <ul>
+                                    <li>
+                                        Simplification & Approximation
+                                    </li>
+                                    <li>
+                                        Percentage
+                                    </li>
+                                    <li>
+                                        Profit & Loss
+                                    </li>
+                                    <li>
+                                        Simple Interest
+                                    </li>
+                                    <li>
+                                        Compound Interest
+                                    </li>
+                                    <li>
+                                        Mixture and Alligation
+                                    </li>
+                                    <li>
+                                        Ratio and Proportion
+                                    </li>
+                                    <li>
+                                        Time and Work
+                                    </li>
+                                    <li>
+                                        Speed, Distance and Time
+                                    </li>
+                                    <li>
+                                        Boat and Stream
+                                    </li>
+                                    <li>
+                                        Average
+                                    </li>
+                                    <li>
+                                        Ages
+                                    </li>
+                                    <li>
+                                        Partnership
+                                    </li>
+                                    <li>
+                                        Number System
+                                    </li>
+                                    <li>
+                                        Data Interpretation
+                                    </li>
+                                    <li>
+                                        LCM & HCF
+                                    </li>
+                                    <li>
+                                        Algebra
+                                    </li>
+                                    <li>
+                                        Geometry
+                                    </li>
+                                    <li>
+                                        Trigonometry
+                                    </li>
+                                    <li>
+                                        Mensuration (2D & 3D)
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <hr>
+                        </div>
+                        <div class="col-sm-6"><button type="button" class="btn btn-info btn-block" onclick="giToggle()"
+                                style="color:#01022b;border-color:#01022b; font-weight: bold; margin: 2 px; padding-top: 5 px;"><i>General
+                                    Intelligence</i></button>
+                            <div id="gi" style="text-align: left; display: none;">
+                                <ul>
+                                    <li>
+                                        Syllogism
+                                    </li>
+                                    <li>
+                                        Coding Decoding
+                                    </li>
+                                    <li>
+                                        Alphanumeric Series
+                                    </li>
+                                    <li>
+                                        Blood Relation
+                                    </li>
+                                    <li>
+                                        Distance and Direction
+                                    </li>
+                                    <li>
+                                        Order and Ranking
+                                    </li>
+                                    <li>
+                                        Analogy (Verbal & Non Verbal)
+                                    </li>
+                                    <li>
+                                        Classification
+                                    </li>
+                                    <li>
+                                        Calendar
+                                    </li>
+                                    <li>
+                                        Statement & Assumption
+                                    </li>
+                                    <li>
+                                        Statement & Conclusion
+                                    </li>
+                                    <li>
+                                        Dice
+                                    </li>
+                                    <li>
+                                        Figure Counting
+                                    </li>
+                                    <li>
+                                        Mirror & Water Image
+                                    </li>
+                                    <li>
+                                        Embedded Figure
+                                    </li>
+                                    <li>
+                                        Venn Diagram
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6"><button type="button" class="btn btn-info btn-block" onclick="gaToggle()"
+                                style="color:#01022b;border-color:#01022b; font-weight: bold; margin: 2 px; padding-top: 5 px;"><i>General
+                                    Studies</i></button>
+                            <div id="ga" style="text-align: left; display: none;">
+                                <ul>
+                                    <li>
+                                        History
+                                    </li>
+                                    <li>
+                                        Geography
+                                    </li>
+                                    <li>
+                                        Polity
+                                    </li>
+                                    <li>
+                                        Economics
+                                    </li>
+
+                                    <li>
+                                        General Science
+                                    </li>
+                                    <li>
+                                        Static GK
+                                    </li>
+                                    <li>
+                                        Current Affairs
+                                    </li>
+                                    <li>
+                                        Miscellaneous
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- class row2 for cards -->
+            <div class="row">
+                {% for standard in standards %}
+                <div class="col-md-4 d-flex mb-5 justify-content-center">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="color:#2238ff !important;">{{standard.name}}</h4>
+                            <p class="card-text">{{standard.description|truncatechars:75}}</p>
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'curriculum:subject_list' slug=standard.slug %}" class="btn btn-primary"
+                                style="background-color:#2000d4;">Start Learning</a>
+                            {%else%}
+                            <p>Register or login to start learning</p>
+                            <a href="{% url 'user_login' %}" class="btn btn-primary"
+                                style="background-color:#00bcd4;">Login</a>
+                            <a href="{% url 'register' %}" class="btn btn-primary"
+                                style="background-color:#00bcd4;">Register</a>
+                            {%endif%}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <hr class="my-5" style="color:#3822ff;">
+
+    </div>
+
+    <!-- section 3 for activities -->
+
+
+</main>
+<script>
+    function englishToggle() {
+
+        if (document.getElementById("english").style.display === 'none') {
+            document.getElementById("english").style.display = 'block'
+            document.getElementById("maths").style.display = 'block'
+        } else {
+            document.getElementById("english").style.display = 'none'
+            document.getElementById("maths").style.display = 'none'
+
+        }
+    }
+    function mathToggle() {
+
+        if (document.getElementById("maths").style.display === 'none') {
+            document.getElementById("maths").style.display = 'block'
+            document.getElementById("english").style.display = 'block'
+        } else {
+            document.getElementById("maths").style.display = 'none'
+            document.getElementById("english").style.display = 'none'
+        }
+    }
+
+    function giToggle() {
+
+        if (document.getElementById("gi").style.display === 'none') {
+            document.getElementById("gi").style.display = 'block'
+            document.getElementById("ga").style.display = 'block'
+        } else {
+            document.getElementById("gi").style.display = 'none'
+            document.getElementById("ga").style.display = 'none'
+
+        }
+    }
+    function gaToggle() {
+
+        if (document.getElementById("ga").style.display === 'none') {
+            document.getElementById("ga").style.display = 'block'
+            document.getElementById("gi").style.display = 'block'
+        } else {
+            document.getElementById("ga").style.display = 'none'
+            document.getElementById("gi").style.display = 'none'
+        }
+    }
+</script>
+
+{%endblock%}

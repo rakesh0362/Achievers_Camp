@@ -1,0 +1,335 @@
+html,
+body,
+header,
+#intro {
+  height: 100%;
+}
+
+#intro {
+  background: /*linear-gradient(
+      rgba(238, 240, 230, 0.7),
+      rgba(245, 238, 238, 0.7)
+    ),*/ url("../Images/3.png")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#bankAndssc {
+  background: /*linear-gradient(
+      rgba(238, 240, 230, 0.7),
+      rgba(245, 238, 238, 0.7)
+    ),*/ url("../Images/BankandSSc.png")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#bank {
+  background: /*linear-gradient(
+      rgba(238, 240, 230, 0.7),
+      rgba(245, 238, 238, 0.7)
+    ),*/ url("../Images/bank.png")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#ssc {
+  background: /*linear-gradient(
+      rgba(238, 240, 230, 0.7),
+      rgba(245, 238, 238, 0.7)
+    ),*/ url("../Images/SSC.png")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.achievers-header {
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(185, 53, 19);
+}
+.achievers-content {
+  background-color: rgb(190, 197, 183);
+  color: rgb(236, 228, 228);
+}
+#best-features {
+  background: /*linear-gradient(
+      rgba(238, 240, 230, 0.7),
+      rgba(245, 238, 238, 0.7)
+    ),*/ url("../Images/CA.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+ul.nav a:hover {
+  color: rgb(76, 192, 76) !important;
+}
+#best-features1 {
+  background: /*linear-gradient(
+      rgba(238, 240, 230, 0.7),
+      rgba(245, 238, 238, 0.7)
+    ),*/ url("../Images/SubjectsImage.png")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#vocab {
+  background: /*linear-gradient(
+      rgba(238, 240, 230, 0.7),
+      rgba(245, 238, 238, 0.7)
+    ),*/ url("../Images/Current\ Affairs.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-light {
+  background-color: transparent !important;
+  transition: 0.5s ease;
+}
+
+.bg-light.scrolled {
+  background-color: #b2ebf2 !important;
+}
+.nav-item {
+  color: #030303;
+}
+.navbar-nav .nav-item .nav-link {
+  color: rgb(51, 255, 0);
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+  color: rgb(8, 8, 8);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #050505 !important;
+  font-weight: bold;
+}
+
+.navbar-light .nav-link {
+  color: #030303 !important;
+}
+
+.navbar-expand-lg {
+  background-color: #030303;
+}
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: #b2ebf2;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: #b2ebf2;
+  }
+}
+ul li ul li {
+  float: none;
+}
+
+.text-white {
+  color: white;
+}
+
+hr {
+  border-color: inherit;
+}
+
+.btn-outline-white {
+  border-color: cyan;
+}
+
+.event-mask {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  text-align: center;
+  background: linear-gradient(
+    rgba(214, 203, 203, 0.5),
+    rgba(190, 174, 174, 0.5)
+  );
+  transform: translate(0, -100%);
+}
+
+#event-section {
+  background: linear-gradient(
+      rgba(201, 183, 183, 0.5),
+      rgba(173, 148, 148, 0.5)
+    ),
+    url("../Images/1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.info-header {
+  height: auto;
+}
+
+#page-intro {
+  height: 60%;
+}
+
+#page-intro {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Images/3.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* breadcrumb class */
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: transparent;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: #3920a7;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #b2ebf2;
+  text-decoration: underline;
+}
+
+.disabled-text {
+  color: gray;
+}
+
+/* bradcrumb class over */
+
+.card-std {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  padding: 14px 14px 14px 14px;
+  cursor: default;
+}
+
+.card-std:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(200, 0, 0, 0.12), 0 4px 8px rgba(200, 0, 0, 0.06);
+}
+
+.box-shadow-hover:hover {
+  box-shadow: 0 2px 40px 0 rgba(100, 0, 0, 0.16),
+    0 2px 10px 0 rgba(100, 0, 0, 0.12);
+}
+
+/* get lesson button */
+.button-les {
+  border-radius: 4px;
+  background-color: #00bcd4;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.cardFeature {
+  background-color: red !important;
+}
+.card-title {
+  color: #ffffff !important;
+}
+.features {
+  background-color: black;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0%;
+}
+
+.button-les span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-les span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-les:hover span {
+  padding-right: 25px;
+}
+
+.button-les:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* get lesson button */
+
+/* responsive video */
+#player-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background-color: rgb(231, 214, 214);
+  z-index: 999;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* responsive video */

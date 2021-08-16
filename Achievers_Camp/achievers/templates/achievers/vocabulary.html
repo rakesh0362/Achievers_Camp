@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Standards {% endblock %}
+
+
+{% block image_block %}
+
+{% endblock %}
+
+{% block content %}
+<!-- section 1 for standards-->
+
+<section id="vocab" class="text-center m-4">
+    <h2 class="my-5 py-3 font-weight-bold" style="color:#ff5722;">Vocabulary</h2>
+    <!-- class row for description-->
+
+    <!-- class row2 for cards -->
+    <div class="row">
+        {% for vocabulary in vocabularys reversed %}
+        <div class="col-md-4 d-flex mb-5 justify-content-center">
+
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <h4 class="card-title" style="color:#0909e7 !important;">{{vocabulary.word}}</h4>
+                    <p class="card-text">Parts of Speech: {{vocabulary.partsofspeech}}</p>
+                    <p class="card-text">Meaning: {{vocabulary.meaning}}</p>
+                    <p class="card-text">Synonyms: {{vocabulary.synonyms}}</p>
+                    <p class="card-text">Antonyms: {{vocabulary.antonyms}}</p>
+                    <p class="card-text">{{vocabulary.sentence}}</p>
+
+
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+{%endblock%}
